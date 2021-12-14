@@ -16,6 +16,7 @@ phases:
         - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
+      - docker login --username un --password pwd 39fdc8ab-ac3a-4a84-8042-413c663bd72f
       - docker build --tag $REPOSITORY_URI:$TAG .
 
   post_build:
